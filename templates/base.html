@@ -8,10 +8,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <title>{{nome_pagina}}</title>
+    <title>{{page_title}}</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
@@ -23,6 +22,10 @@
     />
   </head>
 <body>
-  {% block main %}{% endblock %}
+  <main class="h-screen w-screen">
+    {% include "components/header.html" %}
+    {% block main %}{% endblock %}
+    {% include "components/footer.html" %}
+  </main>
 </body>
 </html>
