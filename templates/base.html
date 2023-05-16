@@ -7,6 +7,11 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="icon"
+      href="{{ url_for('static', filename='logo.svg') }}"
+      type="image/x-icon"
+    />
 
     <title>{{page_title}}</title>
 
@@ -20,12 +25,15 @@
       rel="stylesheet"
       href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
     />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@heroicons/react@1.0.4/dist/heroicons.min.css"
+      rel="stylesheet"
+    />
   </head>
-<body>
-  <main class="h-screen w-screen">
-    {% include "components/header.html" %}
-    {% block main %}{% endblock %}
-    {% include "components/footer.html" %}
-  </main>
-</body>
+  <body>
+    <main class="h-screen w-screen overflow-hidden">
+      {% include "components/header.html" %} {% block main %}{% endblock %} {%
+      include "components/footer.html" %}
+    </main>
+  </body>
 </html>
